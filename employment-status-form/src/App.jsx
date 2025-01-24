@@ -6,7 +6,7 @@ export default function App() {
     const email = formData.get("email");
     const password = formData.get("password");
     const employmentStatus = formData.get("employmentStatus");
-    console.log(email, password,employmentStatus);
+    console.log(email, password, employmentStatus);
   }
 
   return (
@@ -48,7 +48,12 @@ export default function App() {
             Part-time
           </label>
           <label>
-            <input type="radio" name="employmentStatus" value="full-time" />
+            <input
+              type="radio"
+              name="employmentStatus"
+              value="full-time"
+              defaultChecked={true}
+            />
             Full-time
           </label>
           <label>
