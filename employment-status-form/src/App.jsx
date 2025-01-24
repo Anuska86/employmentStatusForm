@@ -6,8 +6,9 @@ export default function App() {
     const email = formData.get("email");
     const password = formData.get("password");
     const employmentStatus = formData.get("employmentStatus");
-    const workType= formData.getAll("workType");
-    console.log(email, password, employmentStatus,workType);
+    const workType = formData.getAll("workType");
+    const age = formData.get("age");
+    console.log(email, password, employmentStatus, workType, age);
   }
 
   return (
@@ -37,6 +38,18 @@ export default function App() {
           name="description"
           defaultValue="This is a description"
         ></textarea>
+
+        <label htmlFor="age">Your age:</label>
+        <select id="age" name="age" defaultValue="" required>
+          <option value="" disabled>
+            Choose an option
+          </option>
+          <option value="18-25">18-25</option>
+          <option value="26-35">26-35</option>
+          <option value="36-45">36-45</option>
+          <option value="46-55">46-55</option>
+          <option value="56-65">56-65</option>
+        </select>
 
         <fieldset>
           <legend>Employment Status:</legend>
