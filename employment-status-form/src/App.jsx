@@ -3,12 +3,10 @@ import "./App.css";
 
 export default function App() {
   function signUp(formData) {
-    const email = formData.get("email");
-    const password = formData.get("password");
-    const employmentStatus = formData.get("employmentStatus");
+    const data = Object.fromEntries(formData);
     const workType = formData.getAll("workType");
-    const age = formData.get("age");
-    console.log(email, password, employmentStatus, workType, age);
+    const allData = { ...data, workType };
+    console.log(allData);
   }
 
   return (
@@ -31,13 +29,6 @@ export default function App() {
           type="password"
           name="password"
         />
-
-        <label htmlFor="description">Description:</label>
-        <textarea
-          id="description"
-          name="description"
-          defaultValue="This is a description"
-        ></textarea>
 
         <label htmlFor="age">Your age:</label>
         <select id="age" name="age" defaultValue="" required>
@@ -96,7 +87,14 @@ export default function App() {
           </label>
         </fieldset>
 
-        <button>Submit</button>
+        <label htmlFor="description">Any comments:</label>
+        <textarea
+          id="comments"
+          name="comments"
+          defaultValue="Add your comments here"
+        ></textarea>
+
+        <button>Submit form</button>
       </form>
     </section>
   );

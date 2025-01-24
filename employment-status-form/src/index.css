@@ -32,10 +32,11 @@ input[type="password"] {
   margin-bottom: 20px;
 }
 
-textarea {
-  margin-bottom: 20px;
+#age {
   border-radius: 100px;
   border: 1px solid #0d9488;
+  height: 2rem;
+  margin-bottom: 20px;
 }
 
 fieldset {
@@ -62,9 +63,15 @@ input[type="radio"] {
   margin-right: 40%;
 }
 
-button {
+textarea {
+  margin-bottom: 20px;
   border-radius: 100px;
   border: 1px solid #0d9488;
+}
+
+button {
+  border-radius: 100px;
+  border: 2px solid #0d9488;
   padding: 10px 30px;
   cursor: pointer;
   margin-top: 20px;
