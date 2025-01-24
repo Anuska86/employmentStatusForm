@@ -41,6 +41,12 @@ input[type="checkbox"], input[type="radio"] {
   margin-right: 10px;
 }
 
+.radioCenter{
+  text-align: left;
+  margin-left: 40%;
+  margin-right: 40%;
+}
+
 fieldset {
   border: 1px solid #262626;
   margin-bottom: 20px;

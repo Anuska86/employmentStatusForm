@@ -39,15 +39,15 @@ export default function App() {
 
         <fieldset>
           <legend>Employment Status:</legend>
-          <label>
+          <label className="radioCenter">
             <input type="radio" name="employmentStatus" value="unemployed" />
             Unemployed
           </label>
-          <label>
+          <label className="radioCenter">
             <input type="radio" name="employmentStatus" value="part-time" />
             Part-time
           </label>
-          <label>
+          <label className="radioCenter">
             <input
               type="radio"
               name="employmentStatus"
@@ -56,7 +56,7 @@ export default function App() {
             />
             Full-time
           </label>
-          <label>
+          <label className="radioCenter">
             <input type="radio" name="employmentStatus" value="internship" />
             Internship
           </label>
