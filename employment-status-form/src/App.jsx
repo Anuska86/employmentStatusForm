@@ -6,7 +6,8 @@ export default function App() {
     const email = formData.get("email");
     const password = formData.get("password");
     const employmentStatus = formData.get("employmentStatus");
-    console.log(email, password, employmentStatus);
+    const workType= formData.getAll("workType");
+    console.log(email, password, employmentStatus,workType);
   }
 
   return (
@@ -59,6 +60,26 @@ export default function App() {
           <label className="radioCenter">
             <input type="radio" name="employmentStatus" value="internship" />
             Internship
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Preferred type of work:</legend>
+          <label className="checkboxCenter">
+            <input type="checkbox" name="workType" value="per hour" />
+            Per hour
+          </label>
+          <label className="checkboxCenter">
+            <input type="checkbox" name="workType" value="remote" />
+            Remote
+          </label>
+          <label className="checkboxCenter">
+            <input type="checkbox" name="workType" value="hybrid" />
+            Hybrid
+          </label>
+          <label className="checkboxCenter">
+            <input type="checkbox" name="workType" value="office" />
+            In office
           </label>
         </fieldset>
 
